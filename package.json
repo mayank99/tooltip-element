@@ -1,0 +1,15 @@
+{
+  "name": "tooltip-element",
+  "type": "module",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "build": "vite build",
+    "dev": "vite --host",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "@floating-ui/dom": "^1.5.1",
+    "vite": "^4.4.9"
+  }
+}
