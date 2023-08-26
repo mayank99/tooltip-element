@@ -132,7 +132,7 @@ export class Tooltip extends HTMLElement {
 	}
 
 	static get observedAttributes() {
-		return ['text'];
+		return ['text', 'aria];
 	}
 
 	attributeChangedCallback(name, old, value) {
