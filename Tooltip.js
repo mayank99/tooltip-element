@@ -11,13 +11,9 @@ const uniqueId = (() => {
 })();
 
 export class Tooltip extends HTMLElement {
-	constructor() {
-		super();
-		this.tooltipName = this.getAttribute('tooltip-tag') || 'tool-tip-text';
-	}
-
 	static register({ triggerTag = 'tool-tip', tooltipTag = 'tool-tip-text' } = {}) {
 		customElements.define(triggerTag, this);
+		this.tooltipName = 'tool-tip-text';
 		this.addStyles(tooltipTag);
 	}
 
