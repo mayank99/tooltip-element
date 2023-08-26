@@ -11,7 +11,7 @@ const uniqueId = (() => {
 })();
 
 export class Tooltip extends HTMLElement {
-	construtctor() {
+	constructor() {
 		super();
 		this.tooltipName = 'tool-tip-text'; // TODO: Figure out how to make this customizable
 	}
