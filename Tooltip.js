@@ -102,7 +102,7 @@ export class Tooltip extends HTMLElement {
 	async show() {
 		await new Promise((resolve) => setTimeout(resolve, 100));
 
-		if (!this.hovered && !this.focused) return;
+		if (!this.hovered && !this.focused && !this.tapping) return;
 		this.tooltip.hidden = false;
 
 		const { x, y } = await computePosition(this.trigger, this.tooltip, {
