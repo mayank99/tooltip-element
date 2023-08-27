@@ -75,6 +75,28 @@ export class Tooltip extends HTMLElement {
 				}
 			}.bind(this)
 		);
+
+		async function pointerdown(e) {
+			if (e.pointerType !== 'touch') return;
+			this.tapping = true;
+
+			await new Promise((resolve) => setTimeout(resolve, 500));
+			if (!this.isTapping) return;
+
+			navigator.vibrate(10);
+			this.show();
+		}
+		async function pointerup(e) {
+			if (e.pointerType !== 'touch') return;
+			this.tapping = false;
+
+			await new Promise((resolve) => setTimeout(resolve, 1500));
+			this.hide();
+		}
+
+		this.trigger.addEventListener('pointerdown', pointerdown.bind(this));
+		this.trigger.addEventListener('pointerup', pointerup.bind(this));
+		this.trigger.addEventListener('pointerleave', pointerup.bind(this));
 	}
 
 	async show() {
