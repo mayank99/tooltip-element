@@ -60,12 +60,12 @@ export class Tooltip extends HTMLElement {
 		if (matchMedia('(hover: hover)').matches) {
 			this.trigger.addEventListener('pointerenter', hovered.bind(this));
 			this.trigger.addEventListener('pointerleave', unhovered.bind(this));
+			this.trigger.addEventListener('focus', focused.bind(this));
+			this.trigger.addEventListener('blur', unfocused.bind(this));
 		}
 
 		this.tooltip.addEventListener('pointerenter', hovered.bind(this));
 		this.tooltip.addEventListener('pointerleave', unhovered.bind(this));
-		this.trigger.addEventListener('focus', focused.bind(this));
-		this.trigger.addEventListener('blur', unfocused.bind(this));
 
 		this.ownerDocument.addEventListener(
 			'keydown',
