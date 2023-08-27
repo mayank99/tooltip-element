@@ -81,7 +81,7 @@ export class Tooltip extends HTMLElement {
 			this.tapping = true;
 
 			await new Promise((resolve) => setTimeout(resolve, 500));
-			if (!this.isTapping) return;
+			if (!this.tapping) return;
 
 			navigator.vibrate(10);
 			this.show();
