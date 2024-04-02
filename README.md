@@ -8,7 +8,7 @@ Codesandbox demo: https://codesandbox.io/s/github/mayank99/tooltip-element
 
 ## Usage
 
-Import the Tooltip class and call `.register()` on it, optionally passing `tooltipTag`/`triggerTag` into it.
+Import the Tooltip class and call `.register()` on it, optionally passing `triggerTag` into it.
 ```js
 import { Tooltip } from './Tooltip.js';
 Tooltip.register();
