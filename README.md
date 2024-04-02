@@ -25,7 +25,7 @@ Now the tooltip can be used by wrapping it around the element that should trigge
 </tool-tip>
 ```
 
-Alternatively, the tooltip can be automatically be associated with the trigger using `aria-labelledby`. To opt into this, pass `aria="description"`.
+Alternatively, the tooltip can be automatically be associated with the trigger using `aria-describedby`. To opt into this, pass `aria="description"`.
 
 ```html
 <tool-tip
