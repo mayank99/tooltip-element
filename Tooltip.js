@@ -13,12 +13,12 @@ const uniqueId = (() => {
 export class Tooltip extends HTMLElement {
 	constructor() {
 		super();
-		this.tooltipName = 'tool-tip-text'; // TODO: Figure out how to make this customizable
+		this.tooltipName = `${this.tagName}-text`;
 	}
 	
 	static register({ triggerTag = 'tool-tip' } = {}) {
 		customElements.define(triggerTag, this);
-		this.addStyles('tool-tip-text'); // TODO: Figure out how to make this customizable
+		this.addStyles(`${this.tagName}-text`);
 	}
 
 	connectedCallback() {
