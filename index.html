@@ -1,60 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width">
-	<meta name="color-scheme" content="dark light">
-	<title>tooltip element demo</title>
-</head>
-<body>
-	<h1>tooltip demo</h1>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="color-scheme" content="dark light" />
+		<title>tooltip element demo</title>
+	</head>
+	<body>
+		<h1>tooltip demo</h1>
 
-	<div>
-		<tool-tip text='Save file'>
-			<button>
-				<span aria-hidden='true'>💾</span>
-				<span class='visually-hidden'>Save file</span>
-			</button>
-		</tool-tip>
-	
-		<tool-tip text='Delete file'>
-			<button>
-				<span aria-hidden='true'>🗑️</span>
-				<span class='visually-hidden'>Delete file</span>
-			</button>
-		</tool-tip>
-	</div>
-	
-	<div>
-		<tool-tip text='Deletion might take a minute' aria='description'>
-			<button>Delete project</button>
-		</tool-tip>
-	</div>
+		<div>
+			<tool-tip text="Save file">
+				<button>
+					<span aria-hidden="true">💾</span>
+					<span class="visually-hidden">Save file</span>
+				</button>
+			</tool-tip>
 
-	<style>
-		tool-tip {
-			display: contents;
-		}
-		.visually-hidden:not(:focus):not(:active) {
-			clip-path: inset(50%);
-			height: 1px;
-			overflow: hidden;
-			position: absolute;
-			white-space: nowrap;
-			width: 1px;
-		}
-		body {
-			height: 100dvb;
-			display: grid;
-			place-content: center;
-			place-items: center;
-			gap: 1rem;
-		}
-	</style>
+			<tool-tip text="Delete file">
+				<button>
+					<span aria-hidden="true">🗑️</span>
+					<span class="visually-hidden">Delete file</span>
+				</button>
+			</tool-tip>
+		</div>
 
-	<script type='module'>
-		import { Tooltip } from './Tooltip.js';
-		Tooltip.register()
-	</script>
-</body>
+		<div>
+			<tool-tip text="Deletion might take a minute" type="description">
+				<button>Delete project</button>
+			</tool-tip>
+		</div>
+
+		<style>
+			tool-tip {
+				display: contents;
+			}
+			.visually-hidden:not(:focus):not(:active) {
+				clip-path: inset(50%);
+				height: 1px;
+				overflow: hidden;
+				position: absolute;
+				white-space: nowrap;
+				width: 1px;
+			}
+			body {
+				height: 100dvb;
+				display: grid;
+				place-content: center;
+				place-items: center;
+				gap: 1rem;
+			}
+		</style>
+
+		<script type="module">
+			import { Tooltip } from "./Tooltip.js";
+			Tooltip.register();
+		</script>
+	</body>
 </html>
