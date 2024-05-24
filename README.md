@@ -4,7 +4,7 @@ An accessible tooltip built using web components, `popover` API, and `@floating-
 
 See `Tooltip.js` for source code and `index.html` for example usage.
 
-Codesandbox demo: https://codesandbox.io/s/github/mayank99/tooltip-element
+Live StackBlitz demo: https://stackblitz.com/github/mayank99/tooltip-element
 
 ## Usage
 
